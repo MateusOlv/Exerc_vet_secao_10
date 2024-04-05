@@ -16,8 +16,11 @@ public class Alturas {
 		
 		for(int i = 0 ; i < n ; i++) {
 			System.out.printf("Dados da %dª pessoa:", i+1);
+			System.out.print("Nome: ");
 			nome[i] = sc.next();
+			System.out.print("Idade: ");
 			idade[i] = sc.nextInt();
+			System.out.print("Altura: ");
 			altura[i] = sc.nextDouble();
 		}
 		
@@ -26,7 +29,7 @@ public class Alturas {
 			somaAlt += altura[i]; 
 		}
 		
-		System.out.printf("Altura média: %.2f", somaAlt / n);
+		System.out.printf("\nAltura média: %.2f\n", somaAlt / n);
 		
 		int cont = 0;
 		for(int i = 0 ; i < n ; i++) {
@@ -35,9 +38,13 @@ public class Alturas {
 			}
 		}
 		
-		System.out.printf("Pessoas com menos de 16 anos: %.2f%%", cont * 100 / n);
+		double media = cont * 100 / n; 
+		
+		System.out.printf("Pessoas com menos de 16 anos: %.2f%%\n", media);
 		for(int i = 0 ; i < n ; i++) {
-			if(idade[i] < 16) System.out.println(nome[i]);
+			if(idade[i] < 16) {
+				System.out.println(nome[i]);
+			}
 		}
 		
 		sc.close();
