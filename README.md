@@ -1,1 +1,1 @@
-# Ecercícios de Vetores em Java 
+# Exercícios de Vetores em Java 
