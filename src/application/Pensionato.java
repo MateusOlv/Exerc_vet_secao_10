@@ -16,20 +16,21 @@ public class Pensionato {
 		for(int i = 0 ; i < n ; i++) {
 			System.out.printf("Aluguel #%d:\n", i+1);
 			System.out.print("Nome: ");
-			String nomeEstudante = sc.next();
+			sc.nextLine();
+			String nomeEstudante = sc.nextLine();
 			System.out.print("Email: ");
 			String emailEstudante = sc.next();
 			System.out.print("Quarto: ");
 			int quarto = sc.nextInt();
 						
-			aluguel[quarto] = new Aluguel(nomeEstudante, emailEstudante, quarto);
+			aluguel[quarto] = new Aluguel(nomeEstudante, emailEstudante);
 		}
 		
 		System.out.println();
 		System.out.println("Quartos ocupados:");
 		for(int i = 0 ; i < 10 ; i++) {
 			if(aluguel[i] != null) {
-				System.out.printf("%d: %s, %s\n", i, aluguel[i].getNomeEstudante(), 				aluguel[i].getEmailEstudante());
+				System.out.println(i + ": " + aluguel[i]);
 			}
 		}
 		

@@ -3,12 +3,10 @@ package entities;
 public class Aluguel {
 	private String nomeEstudante;
 	private String emailEstudante;
-	private int quarto;
 	
-	public Aluguel(String nomeEstudante, String emailEstudante, int quarto) {
+	public Aluguel(String nomeEstudante, String emailEstudante) {
 		this.nomeEstudante = nomeEstudante;
 		this.emailEstudante = emailEstudante;
-		this.quarto = quarto;
 	}
 
 	public String getNomeEstudante() {
@@ -27,12 +25,9 @@ public class Aluguel {
 		this.emailEstudante = emailEstudante;
 	}
 
-	public int getQuarto() {
-		return quarto;
+	public String toString(){
+		return nomeEstudante + ", " + emailEstudante;
 	}
-
-	public void setQuarto(int quarto) {
-		this.quarto = quarto;
-	}
-
+	
+	
 }
